@@ -1,18 +1,22 @@
+import os
 import logging
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 from routes import predict, analytics, dashboard
 from routes._response import versioned_response
+
+load_dotenv()
 
 app = FastAPI(title="SafaltaSetu API")
 logger = logging.getLogger(__name__)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(","),
     allow_methods=["*"],
     allow_headers=["*"],
 )
