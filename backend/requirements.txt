@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+scikit-learn
+catboost
+xgboost
+pandas
+numpy
+pydantic
+python-multipart
+joblib
+shap
+cors
+httpx

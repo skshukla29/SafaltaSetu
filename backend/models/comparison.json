@@ -1,0 +1,90 @@
+{
+  "academic": {
+    "CatBoost": {
+      "accuracy": 90.2,
+      "precision": 89.6,
+      "recall": 90.5,
+      "f1": 90.0,
+      "roc_auc": 93.1
+    },
+    "XGBoost": {
+      "accuracy": 87.1,
+      "precision": 86.6,
+      "recall": 87.3,
+      "f1": 86.8,
+      "roc_auc": 91.2
+    },
+    "RandomForest": {
+      "accuracy": 85.0,
+      "precision": 84.4,
+      "recall": 85.2,
+      "f1": 84.8,
+      "roc_auc": 89.5
+    },
+    "SVM": {
+      "accuracy": 81.0,
+      "precision": 80.2,
+      "recall": 81.3,
+      "f1": 80.7,
+      "roc_auc": 85.0
+    },
+    "MLP": {
+      "accuracy": 83.2,
+      "precision": 82.8,
+      "recall": 83.1,
+      "f1": 82.9,
+      "roc_auc": 87.0
+    },
+    "LogisticRegression": {
+      "accuracy": 76.3,
+      "precision": 75.8,
+      "recall": 76.0,
+      "f1": 75.9,
+      "roc_auc": 80.0
+    }
+  },
+  "platform": {
+    "CatBoost": {
+      "accuracy": 94.1,
+      "precision": 93.8,
+      "recall": 94.3,
+      "f1": 94.0,
+      "roc_auc": 96.2
+    },
+    "XGBoost": {
+      "accuracy": 90.8,
+      "precision": 90.2,
+      "recall": 91.0,
+      "f1": 90.6,
+      "roc_auc": 94.2
+    },
+    "RandomForest": {
+      "accuracy": 88.6,
+      "precision": 88.0,
+      "recall": 88.9,
+      "f1": 88.4,
+      "roc_auc": 92.1
+    },
+    "SVM": {
+      "accuracy": 84.3,
+      "precision": 83.8,
+      "recall": 84.5,
+      "f1": 84.1,
+      "roc_auc": 89.4
+    },
+    "MLP": {
+      "accuracy": 86.2,
+      "precision": 85.6,
+      "recall": 86.4,
+      "f1": 86.0,
+      "roc_auc": 90.3
+    },
+    "LogisticRegression": {
+      "accuracy": 82.4,
+      "precision": 81.8,
+      "recall": 82.6,
+      "f1": 82.1,
+      "roc_auc": 86.1
+    }
+  }
+}
