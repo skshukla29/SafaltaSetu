@@ -11,8 +11,18 @@ export function usePredictor(apiFn, demoFallback, offlineText = "Backend offline
       const res = await apiFn(formData)
       setResult(res.data)
       return res.data
-    } catch (_error) {
-      toast.error("Prediction failed. Is the backend running?")
+    } catch (error) {
+      const status = error?.response?.status
+      const detail =
+        error?.response?.data?.detail ||
+        error?.response?.data?.message ||
+        error?.message ||
+        "Unknown error"
+
+      toast.error(status ? `Prediction failed (${status})` : "Prediction failed. Is the backend running?")
+      if (detail) {
+        toast(typeof detail === "string" ? detail : "Prediction request failed")
+      }
       toast(offlineText)
       const demo = demoFallback(formData)
       setResult(demo)
